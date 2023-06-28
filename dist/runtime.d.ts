@@ -5,7 +5,7 @@ import IntlMessageFormat, { FormatXMLElementFn, Formats } from 'intl-messageform
 declare const $locale: {
     set: (newLocale: string | null | undefined) => void | Promise<void>;
     update(this: void, updater: svelte_store.Updater<string | null | undefined>): void;
-    subscribe(this: void, run: svelte_store.Subscriber<string | null | undefined>, invalidate?: svelte_store.Invalidator<string | null | undefined> | undefined): svelte_store.Unsubscriber;
+    subscribe(this: void, run: svelte_store.Subscriber<string | null | undefined>, invalidate?: ((value?: string | null | undefined) => void) | undefined): svelte_store.Unsubscriber;
 };
 
 interface LocaleDictionary {
